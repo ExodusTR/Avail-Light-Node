@@ -35,3 +35,28 @@ rustup update nightly
 ```
 rustup target add wasm32-unknown-unknown --toolchain nightly
 ```
+Avail Light reposunu klonlayalım.
+
+```
+git clone https://github.com/availproject/avail-light.git
+```
+Screen oluşturalım ve Avail klasörüne girelim.
+
+```
+screen -S avail
+```
+```
+cd avail-light
+```
+
+1.7.2 sürümünün branchını hedefleyelim.
+
+```
+git checkout v1.7.2
+```
+
+Kurulumu yapalım.
+
+```
+cargo build --release
+```
