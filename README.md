@@ -91,7 +91,7 @@ Servis dosyasını aktifleştirelim ve başlatalım.
 sudo systemctl enable avail-lightd.service
 ```
 ```
-sudo systemctl start availd-lightd.service
+sudo systemctl start avail-lightd.service
 ```
 ```
 sudo systemctl status avail-lightd.service
