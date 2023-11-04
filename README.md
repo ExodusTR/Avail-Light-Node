@@ -61,7 +61,7 @@ Kurulumu yapalım.
 cargo build --release
 ```
 
-Şimdi servis dosyası oluşturacağız.
+Kurulumun bitmesini bekleyelim. Şimdi servis dosyası oluşturacağız.
 
 ```
 sudo touch /etc/systemd/system/avail-lightd.service
@@ -69,3 +69,36 @@ sudo touch /etc/systemd/system/avail-lightd.service
 ```
 sudo nano /etc/systemd/system/avail-lightd.service
 ```
+Aşağıdaki kodları yapıştırıp CTRL + X 'e ve ardından Y'ye basarak kaydedip çıkıyoruz.
+
+```
+[Unit] 
+Description=Avail Light Client
+After=network.target
+StartLimitIntervalSec=0
+[Service] 
+User=root 
+ExecStart= /root/avail-light/target/release/avail-light --network biryani
+Restart=always 
+RestartSec=120
+[Install] 
+WantedBy=multi-user.target
+```
+
+Servis dosyasını aktifleştirelim ve başlatalım.
+
+```
+sudo systemctl enable avail-lightd.service
+```
+```
+sudo systemctl start availd-lightd.service
+```
+```
+sudo systemctl status avail-lightd.service
+```
+Servisin çalıştığını gördükten sonra tekrar Ctrl + C ile servis infosunu kapatalım. Ardından light node loglarını açalım.
+
+```
+journalctl -f -u avail-lightd
+```
+İşlemler bu kadar. Screenden çıkabiliriz.
