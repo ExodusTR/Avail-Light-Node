@@ -60,3 +60,12 @@ Kurulumu yapalım.
 ```
 cargo build --release
 ```
+
+Şimdi servis dosyası oluşturacağız.
+
+```
+sudo touch /etc/systemd/system/avail-lightd.service
+```
+```
+sudo nano /etc/systemd/system/avail-lightd.service
+```
