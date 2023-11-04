@@ -43,7 +43,7 @@ git clone https://github.com/availproject/avail-light.git
 Screen oluşturalım ve Avail klasörüne girelim.
 
 ```
-screen -S avail
+screen -S avail-light
 ```
 ```
 cd avail-light
