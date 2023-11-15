@@ -49,10 +49,10 @@ screen -S avail-light
 cd avail-light
 ```
 
-1.7.2 sürümünün branchını hedefleyelim.
+1.7.3 sürümünün branchını hedefleyelim.
 
 ```
-git checkout v1.7.2
+git checkout v1.7.3
 ```
 
 Kurulumu yapalım.
@@ -78,7 +78,7 @@ After=network.target
 StartLimitIntervalSec=0
 [Service] 
 User=root 
-ExecStart= /root/avail-light/target/release/avail-light --network biryani
+ExecStart= /root/avail-light/target/release/avail-light --network goldberg
 Restart=always 
 RestartSec=120
 [Install] 
